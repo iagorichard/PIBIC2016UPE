@@ -1,6 +1,6 @@
 /**
  * Este é o nosso segundo arquivo de simulação.
- * Aqui iremos simular um cenário de 4 hosts, 4 VM e 1 Cloudlet.
+ * Aqui iremos simular um cenário de 4 hosts, 4 VM e 4 Cloudlets.
  * Métrica a ser utiliada: Modelagem da taxa de chegada de clientes.
  */
 package runTests;
