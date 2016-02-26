@@ -5,11 +5,23 @@
  */
 package runTests;
 
+import java.util.List;
+import org.cloudbus.cloudsim.Cloudlet;
+import org.cloudbus.cloudsim.Vm;
+
 /**
  * Classe principal da simulação.
  * @author Iago Silva
  * @author Leylane Ferreira
  */
 public class Cenario2 {
-    
+    /** Lista de Cloudlets. */
+    private static List<Cloudlet> cloudletList;
+
+    /** Lista de VMs. */
+    private static List<Vm> vmlist;
+
+    public static void main(String[] args) {
+        
+    }
 }
