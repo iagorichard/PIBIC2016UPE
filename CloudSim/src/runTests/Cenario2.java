@@ -5,7 +5,10 @@
  */
 package runTests;
 
+/** Pacotes nativos do Java. */
 import java.util.List;
+
+/** Pacotes do CloudSim. */
 import org.cloudbus.cloudsim.Cloudlet;
 import org.cloudbus.cloudsim.Vm;
 
