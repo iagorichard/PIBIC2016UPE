@@ -104,7 +104,8 @@ public class Cenario1 {
             
             Log.printLine("Simulação finalizada!");
         } catch (Exception e){
-            
+            e.printStackTrace();
+            Log.printLine("A simulação foi interrompida por causa desta exceção acima.");
         }    
     }
     
