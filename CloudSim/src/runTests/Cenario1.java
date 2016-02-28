@@ -62,7 +62,7 @@ public class Cenario1 {
             DatacenterBroker broker1 = new DatacenterBroker("Broker"+1);; //criando broker
             int brokerId = broker1.getId(); //setando a id do broker criado
             
-            vmlist1 = new ArrayList<Vm>();
+            vmlist1 = new ArrayList<>();
             
             //Características da VM
             int vmid = 0; //id da VM
@@ -78,7 +78,7 @@ public class Cenario1 {
             
             broker1.submitVmList(vmlist1); //passando lista1 de VMs pro broker
             
-            cloudletList1 = new ArrayList<Cloudlet>(); //instanciando cloudlet
+            cloudletList1 = new ArrayList<>(); //instanciando cloudlet
             
             //propriedades do cloudlet
             int id = 0;
@@ -117,12 +117,12 @@ public class Cenario1 {
      */
     private static Datacenter createDatacenter(String name){
 
-	List<Host> hostList = new ArrayList<Host>(); //lista de hosts
-        List<Pe> peList = new ArrayList<Pe>(); //lista de CPUs/Cores
+	List<Host> hostList = new ArrayList<>(); //lista de hosts
+        List<Pe> peList = new ArrayList<>(); //lista de CPUs/Cores
 
-        int mips=1000; //taxa de MIPS, em milhões de instruções por segundo
+        int mips=1000; //taxa de MIPS, milhões de instruções por segundo
 
-	peList.add(new Pe(0, new PeProvisionerSimple(mips))); //criando uma CPU, parâmetros:(idDoCore, mipsDenifido)
+	peList.add(new Pe(0, new PeProvisionerSimple(mips))); //criando uma CPU, parâmetros:(idDoCore, mips Definido)
 
 	//definição de atributos do host
         int hostId=0; //id do host
@@ -149,7 +149,7 @@ public class Cenario1 {
 	double costPerMem = 0.05; //custo por uso de memória deste recurso
 	double costPerStorage = 0.001; //custo por armazenamento neste recurso
 	double costPerBw = 0.0; //custo por uso de bw neste recurso (???)
-	LinkedList<Storage> storageList = new LinkedList<Storage>(); //(????)
+	LinkedList<Storage> storageList = new LinkedList<>(); //(????)
 
 	DatacenterCharacteristics characteristics = new DatacenterCharacteristics(
                 arch, os, vmm, hostList, time_zone, cost, costPerMem, costPerStorage, costPerBw); //setando características do DataCenter
