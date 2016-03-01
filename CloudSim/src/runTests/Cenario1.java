@@ -59,7 +59,8 @@ public class Cenario1 {
             @SuppressWarnings("unused")
             Datacenter datacenter0 = createDatacenter("Datacenter_0"); //criando DataCenter
             
-            DatacenterBroker broker1 = new DatacenterBroker("Broker"+1);; //criando broker
+            
+            DatacenterBroker broker1 = new DatacenterBroker("Broker"+1); //criando broker
             int brokerId = broker1.getId(); //setando a id do broker criado
             
             vmlist1 = new ArrayList<Vm>();
@@ -121,25 +122,25 @@ public class Cenario1 {
         List<Pe> peList = new ArrayList<Pe>(); //lista de CPUs/Cores
 
         int mips=1000; //taxa de MIPS, em milhões de instruções por segundo
-
-	peList.add(new Pe(0, new PeProvisionerSimple(mips))); //criando uma CPU, parâmetros:(idDoCore, mipsDenifido)
+        peList.add(new Pe(0, new PeProvisionerSimple(mips))); //criando uma CPU, parâmetros:(idDoCore, mipsDenifido)
 
 	//definição de atributos do host
-        int hostId=0; //id do host
-	int ram = 2048; //memória RAM
+        //int hostId=0; //id do host
+	int ram = 1024; //memória RAM
 	long storage = 1000000; //espaço em disço
-	int bw = 10000; //(???)
+	int bw = 10000; //largura de banda
 
-
-	//criando o host, com as características definidas anteriormente
-	hostList.add(new Host(
-                                hostId,
+        for (int idHost = 0; idHost < 4; idHost++) {
+            hostList.add(new Host(
+                                idHost,
     				new RamProvisionerSimple(ram),
     				new BwProvisionerSimple(bw),
     				storage,
     				peList,
-    				new VmSchedulerSpaceShared(peList))); // primeira máquina criada
-
+    				new VmSchedulerSpaceShared(peList))); //  máquina criada
+        }
+	//criando o host, com as características definidas anteriormente
+	
         //Todas as características referentes ao Datacenter
         String arch = "x86"; //arquitetura do SO
 	String os = "Linux"; //SO
