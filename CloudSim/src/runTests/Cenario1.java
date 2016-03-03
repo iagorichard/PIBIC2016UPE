@@ -58,8 +58,7 @@ public class Cenario1 {
             
             @SuppressWarnings("unused")
             Datacenter datacenter0 = createDatacenter("Datacenter_0"); //criando DataCenter
-            
-            
+                        
             DatacenterBroker broker1 = new DatacenterBroker("Broker"+1); //criando broker
             int brokerId = broker1.getId(); //setando a id do broker criado
             
