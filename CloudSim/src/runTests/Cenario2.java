@@ -49,7 +49,7 @@ public class Cenario2 {
         try{
             int num_user = 1;
             Calendar calendar = Calendar.getInstance();
-            boolean trace_flag = false;
+            boolean trace_flag = true;
 
             CloudSim.init(num_user, calendar, trace_flag);
 

@@ -52,7 +52,7 @@ public class Cenario1 {
         try {
             int num_user = 2; //quantidade de usuários da nuvem
             Calendar calendar = Calendar.getInstance(); //algo para o tempo (?)
-            boolean trace_flag = false; //algo de rastreamento (??)
+            boolean trace_flag = true; //algo de rastreamento (??)
             
             CloudSim.init(num_user, calendar, trace_flag); //antes de se iniciar qualquer entidade, deve-se iniciar a biblioteca do CloudSim
             
